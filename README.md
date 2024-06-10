@@ -1,4 +1,3 @@
-```markdown
 ## Recurrent Neural Network (RNN)
 
 ### Introduction
@@ -16,9 +15,9 @@ Recurrent Neural Networks (RNNs) are a class of artificial neural networks desig
 1. **Recurrent Connection**: The key feature of RNNs is their ability to maintain a hidden state that captures information about the sequence. At each time step \( t \), the hidden state \( h_t \) is updated based on the previous hidden state \( h_{t-1} \) and the current input \( x_t \).
 
 2. **Hidden State Update**:
-   ```math
+   \[
    h_t = \tanh(W_h h_{t-1} + W_x x_t + b_h)
-   ```
+   \]
    Where:
    - \( h_t \) is the hidden state at time step \( t \).
    - \( W_h \) and \( W_x \) are weight matrices for the hidden state and input, respectively.
@@ -26,9 +25,9 @@ Recurrent Neural Networks (RNNs) are a class of artificial neural networks desig
    - \( \tanh \) is the hyperbolic tangent activation function.
 
 3. **Output Calculation**:
-   ```math
+   \[
    y_t = W_y h_t + b_y
-   ```
+   \]
    Where:
    - \( y_t \) is the output at time step \( t \).
    - \( W_y \) is the weight matrix for the output.
@@ -61,13 +60,3 @@ model.fit(x_train, y_train, epochs=10, batch_size=32)
 # Evaluate the model
 accuracy = model.evaluate(x_train, y_train)
 print("Accuracy:", accuracy)
-```
-
-### Conclusion
-
-RNNs are a fundamental tool for modeling sequential data, offering the ability to capture temporal dependencies and long-term patterns. Despite their challenges, such as vanishing gradients, they form the basis for more advanced architectures like LSTMs and GRUs, which are widely used in modern applications.
-```
-
-In this Markdown:
-- The formulas are enclosed within triple backticks and marked as `math` for better readability.
-- The code block for Python is correctly formatted with triple backticks and `python` for syntax highlighting.
